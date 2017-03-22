@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>it.unibz.inf</groupId>
-    <artifactId>prediction-plugin</artifactId>
+    <!-- it's recommended to follow the pattern "sonar-{key}-plugin", for example "sonar-php-plugin" -->
+    <artifactId>predictions-plugin</artifactId>
     <version>0.1</version>
-    <name>Prediction plugin</name>
+    <name>Predictions plugin</name>
     <description>Historical version analysis and prediction adviser</description>
     <!-- this is important for sonar-packaging-maven-plugin -->
     <packaging>sonar-plugin</packaging>
@@ -46,7 +47,8 @@
                 <configuration>
                     <!-- the entry-point class that extends org.sonar.api.SonarPlugin -->
                     <pluginClass>it.unibz.inf.prediction_plugin.PredictionPlugin</pluginClass>
-                    <pluginKey>unibzlab</pluginKey>
+                    <!-- used in PageDefinition, may only contain letters and numbers -->
+                    <pluginKey>predictions</pluginKey>
                     <pluginName>${project.name}</pluginName>
                     <finalName>${project.artifactId}-${project.version}</finalName>
                 </configuration>
